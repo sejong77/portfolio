@@ -451,3 +451,32 @@ p:nth-child(2) {
 .testimonial__speech-bubble a:hover {
 	color: var(--color-dark-orange);
 }
+
+/* Contact */
+#contact {
+	background-color: var(--color-dark-blue);
+}
+
+.contact__title,
+.contact__email,
+.contact__rights {
+	color: var(--color-white);
+}
+
+.contact__title {
+	margin-top: 0;
+}
+
+#contact a:hover {
+	color: var(--color-dark-pink);
+}
+
+#contact a:hover i {
+	transform: scale(1.2);
+	transition: transform var(--animation-duration) ease;
+}
+
+#contact i {
+	margin: 18px;
+	font-size: var(--font-large);
+}
