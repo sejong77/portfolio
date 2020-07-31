@@ -443,8 +443,11 @@ button {
 	border-radius: 50px;
 }
 
-.testimonial__speech-bubble a,
-p:nth-child(2) {
+.testimonial__speech-bubble p:nth-child(2) {
+	color: var(--color-blue);
+}
+
+.testimonial__speech-bubble a {
 	color: var(--color-blue);
 }
 
