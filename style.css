@@ -407,3 +407,47 @@ button {
 	width: 300px;
 	height: 450px;
 }
+
+/* Testimonials */
+#testimonials {
+	background-color: var(--color-light-white);
+}
+
+.testimonials {
+	margin: 40px;
+}
+
+.testimonial {
+	display: flex;
+	margin: 32px 0;
+}
+
+.testimonial__avatar {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin: 12px;
+}
+
+.testimonial__avatar:nth-child(odd) {
+	margin-right: 40px;
+}
+
+.testimonial__avatar:nth-child(even) {
+	margin-left: 40px;
+}
+
+.testimonial__speech-bubble {
+	padding: 18px;
+	background-color: var(--color-white);
+	border-radius: 50px;
+}
+
+.testimonial__speech-bubble a,
+p:nth-child(2) {
+	color: var(--color-blue);
+}
+
+.testimonial__speech-bubble a:hover {
+	color: var(--color-dark-orange);
+}
