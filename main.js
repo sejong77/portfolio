@@ -29,3 +29,10 @@ contactBtn.addEventListener('click', event => {
 	const scrollTo2 = document.querySelector(targetLink);
 	scrollTo2.scrollIntoView({ behavior: 'smooth' });
 });
+
+// 스크롤을 내리면 Home화면의 투명도가 변한다.
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+	home.style.opacity = 1 - scrollY / homeHeight;
+});
