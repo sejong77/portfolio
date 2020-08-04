@@ -36,3 +36,18 @@ const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
 	home.style.opacity = 1 - scrollY / homeHeight;
 });
+
+// 스크롤을 내리면 맨 상단으로 이동하는 버튼이 생긴다.
+const arrowUp = document.querySelector('.arrowUp');
+document.addEventListener('scroll', () => {
+	if (scrollY > homeHeight / 2) {
+		arrowUp.classList.add('visible');
+	} else {
+		arrowUp.classList.remove('visible');
+	}
+});
+
+arrowUp.addEventListener('click', () => {
+	const arrowBtn = document.querySelector('#home');
+	arrowBtn.scrollIntoView({ behavior: 'smooth' });
+});

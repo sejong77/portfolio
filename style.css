@@ -515,6 +515,26 @@ button {
 	font-size: var(--font-large);
 }
 
+/* Arrow up */
+.arrowUp {
+	position: fixed;
+	bottom: 50px;
+	right: 8px;
+	font-size: 30px;
+	background-color: var(--color-blue);
+	color: var(--color-white);
+	border-radius: 50%;
+	padding: 6px;
+	opacity: 0;
+	transition: all var(--animation-duration) ease-in;
+	cursor: default;
+}
+
+.arrowUp.visible {
+	opacity: 1;
+	cursor: pointer;
+}
+
 /* Media Query */
 @media screen and (max-width: 768px) {
 	.navbar__toggle-btn {
