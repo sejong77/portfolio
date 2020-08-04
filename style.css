@@ -428,7 +428,7 @@ button {
 }
 
 .project__description h3 {
-	color: var(--color-white);
+	color: var(--color-orange);
 }
 
 .project__description h3:after {
@@ -439,7 +439,7 @@ button {
 	width: 250px;
 	height: 2px;
 	background-color: var(--color-dark-white);
-	margin-left: -125px;
+	transform: translateX(-50%);
 	margin-top: 10px;
 }
 
@@ -558,6 +558,7 @@ button {
 	#navbar {
 		flex-direction: column;
 		align-items: flex-start;
+		background-color: var(--color-dark-blue);
 	}
 
 	#navbar.navbar--dark {
@@ -569,6 +570,10 @@ button {
 		text-align: center;
 		width: 100%;
 		display: none;
+	}
+
+	.navbar__menu.open {
+		display: block;
 	}
 
 	.about__majors {

@@ -20,6 +20,7 @@ navbarMenu.addEventListener('click', event => {
 	if (link == null) {
 		return;
 	}
+	navbarMenu.classList.remove('open');
 	const scrollTo1 = document.querySelector(link);
 	scrollTo1.scrollIntoView({ behavior: 'smooth' });
 });
@@ -28,6 +29,12 @@ contactBtn.addEventListener('click', event => {
 	const targetLink = event.target.dataset.link;
 	const scrollTo2 = document.querySelector(targetLink);
 	scrollTo2.scrollIntoView({ behavior: 'smooth' });
+});
+
+// Navbar의 toggle버튼을 누르면 메뉴가 나온다.
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+	navbarMenu.classList.toggle('open');
 });
 
 // 스크롤을 내리면 Home화면의 투명도가 변한다.
