@@ -52,7 +52,7 @@ arrowUp.addEventListener('click', () => {
 	arrowBtn.scrollIntoView({ behavior: 'smooth' });
 });
 
-// My Work 부분에서 프로젝트를 필터링 한다.
+// My Work 부분에서 버튼을 클릭하면 프로젝트를 필터링 한다.
 const workBtnContainer = document.querySelector('.work__categories');
 const projectContainer = document.querySelector('.work__projects');
 const projects = document.querySelectorAll('.project');
@@ -62,6 +62,14 @@ workBtnContainer.addEventListener('click', event => {
 	if (filter == null) {
 		return;
 	}
+
+	// 클릭한 버튼에 focus가 맞춰진다.
+	const active = document.querySelector('.category__btn.selected');
+	active.classList.remove('selected');
+	const target =
+		event.target.nodeName === 'BUTTON' ? event.target : event.target.parentNode;
+	target.classList.add('selected');
+
 	projectContainer.classList.add('animation-out');
 	setTimeout(() => {
 		projects.forEach(project => {
