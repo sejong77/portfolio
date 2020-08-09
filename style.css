@@ -186,6 +186,10 @@ button {
 	color: var(--color-white);
 }
 
+.home__contact:hover {
+	background-color: var(--color-blue);
+}
+
 /* About */
 .about__majors {
 	display: flex;
@@ -346,6 +350,7 @@ button {
 	border-radius: var(--size-border-radius);
 	font-size: var(--font-regular);
 	padding: 8px 48px;
+	position: relative;
 }
 
 .category__btn:hover,
@@ -369,9 +374,9 @@ button {
 	height: 24px;
 	display: inline-block;
 	line-height: 24px;
-	position: relative;
+	position: absolute;
 	top: -20px;
-	left: 10px;
+	right: 16px;
 	opacity: 0;
 	transition: all var(--animation-duration) ease-in;
 }
@@ -576,26 +581,62 @@ button {
 		display: block;
 	}
 
+	.section {
+		padding: 16px;
+		padding-top: 45px;
+	}
+
 	.about__majors {
 		flex-direction: column;
 		width: 100%;
 		align-items: center;
+		margin-bottom: 45px;
 	}
 
 	.major {
 		margin-bottom: 50px;
 	}
 
+	.school img {
+		width: 98px;
+		height: 98px;
+	}
+
 	.skillset {
 		flex-direction: column;
+	}
+
+	.category__btn {
+		margin: 4px 0;
+		width: 100%;
 	}
 
 	.project {
 		flex-grow: 1;
 	}
 
+	.work__projects .desktop {
+		width: 340px;
+		height: 300px;
+	}
+
+	.testimonial {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.testimonial__avatar:nth-child(even),
+	.testimonial__avatar:nth-child(odd) {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
 	.testimonial__avatar {
-		width: 120px;
-		height: 120px;
+		width: 100px;
+		height: 100px;
+	}
+
+	.testimonial__speech-bubble {
+		order: 1;
 	}
 }
